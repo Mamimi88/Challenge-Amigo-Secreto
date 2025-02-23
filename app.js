@@ -11,6 +11,7 @@ function agregarAmigo() {
     if (agregarAmigo === "") { 
         alert("Por favor, inserte un nombre:");
 } else {
+        amigos.push(amigo);
         alert('Agregado');
 
         actualizarLista();
@@ -24,8 +25,11 @@ function actualizarLista() {
     
         // Recorrer la lista de amigos y agregar cada uno a la lista HTML
         for (let i = 0; i < amigos.length; i++) { // sacado topico duda while y for. 
-                let li =  /// repasé de nuevo el for por no entenderlo en varias paginas. 
+                let li = createElement("li");  /// repasé de nuevo el for por no entenderlo en varias paginas. 
+            li.textContent = amigos[i];
+            listaAmigos.appendChild(li);
         }
+}
 
 }
 
